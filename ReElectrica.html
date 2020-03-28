@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TEXAS ELECTRONICS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Diseñor de Sitios Web "> 
+    <meta name="keywords" content="Diseño de sitios web, html5, css3, Javascript">
+    <meta name="author" content="Edison Figueroa">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #EFF5FB">
+
+<div>
+  <img src="img/texas.png" width="20%" height="200"  style="float">
+  </div>
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   <ul class="nav navbar-nav">
+      <li> <img src="img/texas3.jpg" alt="" class="d-inline-block align-top" width="45" height="50"></li>
+       <li class="dropdown"><a href="index.html">INICIO</a></li>
+       <li class="dropdown"><a href="Administrador.html">ADMINISTRADOR</a></li>
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">INVENTARIO <span class="caret"></span   ></a>
+        <ul class="dropdown-menu">
+           <li><a href="InProducto.html">Ingresar Producto</a></li>
+           <li><a href="AcProducto.html">Actualizar Producto</a></li>
+           <li><a href="ElProducto.html">Eliminar Producto</a></li>
+            <li><a href="CoProducto.html">Consultar Producto</a></li>
+        </ul> </li>
+         <li class="dropdown"><a href="Ventas.html">VENTAS</a></li>
+         
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">UTILIDADES <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+           <li><a href="CalVenta.html">Calcular Venta de producto</a></li>
+           <li><a href="ReElectrica.html">Resistencias Electricas</a></li>
+            </ul> </li>
+    </ul>
+  </div>
+</nav>
+<div class = "container">
+       <center><h1> Calcular Valor de la Resistencia. </h1></center>
+       <img src="img/resistencia.png" width="40%" height="500" style="float:right;">
+    <script >
+          function calcular()
+          {
+              var banda1 = document.f1.b1.value;
+              var banda2= document.f1.b2.value;
+              var banda3= document.f1.b3.value;
+              var valorR= document.f1.c.value;
+              var total=banda1.toString()+banda2.toString();
+              valorR = parseFloat (total) * parseFloat (banda3);
+                       document.f1.c.value=valorR;
+          }
+
+</script>
+<form name ="f1" action="ReElectrica.html" method="post" >
+
+  <h3> 1er. Banda</h3>
+ <h3><select  name="b1" class="form-group">
+       <option value="" style="color:white"> </option>  
+      <option value="0" style="color:black">Negro</option>   
+      <option value="1" style="color:brown"> Marron</option> 
+      <option value="2" style="color:red">   Rojo</option>
+      <option value="3" style="color:orange">Naranja</option>
+      <option value="4" style="color:yellow">Amarillo</option>
+      <option value="5" style="color:green"> Verde</option>
+      <option value="6" style="color:blue">  Azul</option>
+      <option value="7" style="color:violet">Violeta</option>
+      <option value="8" style="color:gray">  Gris</option>
+      <option value="9" style="color:black"> Blanco</option>
+</select></h3>
+  
+ <h3> 2er. Banda</h3>
+ <h3> <select  name="b2" class="form-group">
+       <option value="" style="color:white"> </option>  
+       <option value="0" style="color:black"> Negro</option>   
+       <option value="1" style="color:brown"> Marron</option> 
+       <option value="2" style="color:red">   Rojo</option>
+       <option value="3" style="color:orange">Naranja</option>
+       <option value="4" style="color:yellow">Amarillo</option>
+       <option value="5" style="color:green"> Verde</option>
+       <option value="6" style="color:blue">  Azul</option>
+       <option value="7" style="color:violet">Violeta</option>
+       <option value="8" style="color:gray">  Gris</option>
+       <option value="9" style="color:black"> Blanco</option>
+ </select></h3>
+
+ <h3> 3er. Banda</h3>
+  <h3><select  name="b3" class="form-group">
+       <option value="" style="color:white"> </option>  
+       <option value="0" style="color:black"> Negro</option>   
+       <option value="1" style="color:brown"> Marron</option> 
+       <option value="2" style="color:red">   Rojo</option>
+       <option value="3" style="color:orange">Naranja</option>
+       <option value="4" style="color:yellow">Amarillo</option>
+       <option value="5" style="color:green"> Verde</option>
+       <option value="6" style="color:blue">  Azul</option>
+       <option value="7" style="color:violet">Violeta</option>
+       <option value="8" style="color:gray">  Gris</option>
+       <option value="9" style="color:black"> Blanco</option>
+ </select> </h3>
+ 
+ <input type="Butto" name="" value="CALCULAR" onclick="calcular()" class="btn btn-primary">
+ <input type="Butto" name= "" value="NUEVO" onclick="reset()" class="btn btn-danger">
+
+ <br> <br>
+  <h4><label  class="control-label col-sm-" for="Calculo resistencia">Valor de la Resistencia Electrica: </label> 
+       <input type="text" class="form-group" id="c" name="c" placeholder=""> (Ω) OHMIOS.</h4>
+<hr>
+    
+
+
+
+
+
+
+
+
+
+ <br> <br><br> <br>
+   </footer>
+        <center><div class="derecho">Derecho Reservado
+        <p> Creado por: EDISON FIGUEROA</p></center>
+
+
+      </div></I></FONT>
+
+</body>
+</html>
+
